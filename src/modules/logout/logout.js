@@ -1,10 +1,10 @@
 "use strict";
-//Logout Click Event call firebase unauth hide content and show login modal
+//Logout Click Event to log user out of app
 CheckIn.Logout = $("#logout");
 $(function () {
     CheckIn.Logout.on("click", function () {
-        firebaseRef.unauth();
-        CheckIn.ContentShowHide.hide();
-        CheckIn.LoginModal.show();
+        firebaseRef.unauth(); // logs user out of firebase
+        CheckIn.ContentShowHide.hide(); //hide the main content
+        CheckIn.LoginModal.show(); // show login modal
     });
 });

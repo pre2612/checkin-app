@@ -50,9 +50,9 @@ CheckIn.DeviceList = function () {
             //click evens for button to make a request for device
             $this.on("click", ".request-click", function () {
                 var email = $this.find(".email").text(),
-                    subject = 'Device Request',
-                    emailBody = 'Hi, I need ' + $device.text() + ' when you are done!';
-                window.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
+                    subject = "Device Request",
+                    emailBody = "Hi, I need " + $device.text() + " when you are done!";
+                window.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
             });
             //click evens for button to check in device
             $this.on("click", ".checkin-click", function () {

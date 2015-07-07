@@ -15,7 +15,8 @@ CheckIn.UserEmail = CheckIn.UserEmail || {};
         setUp: function () {
             this.loginEle.on("click", checkin.Login.loginClick);
         },
-        // Login click event check if auth
+        /*Login btn click takes email and pwd values from login modal and pass it on to
+        firebase authwithpwd. On login show main content and display username*/
         loginClick: function (event) {
             event.preventDefault();
             var $email = checkin.LoginModal.getEmailVal(),
@@ -31,7 +32,7 @@ CheckIn.UserEmail = CheckIn.UserEmail || {};
                 }
             });
         },
-        // Show Content and Hide Login Modal
+        // Once authenticated show the main-content and hide login modal
         showContent: function () {
             checkin.ContentShowHide.show();
             checkin.LoginModal.hide();
@@ -45,7 +46,7 @@ CheckIn.UserEmail = CheckIn.UserEmail || {};
                 checkin.LoginModal.show();
             }
         },
-        // Callback to fire on auth
+        // On every reload check if User is authenticated using firebase onAuth
         ifAuth: function () {
             fireBase.onAuth(this.checkIfAuth);
         },

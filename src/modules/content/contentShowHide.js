@@ -1,6 +1,5 @@
 "use strict";
 //This is used to hide the content from unauth user and to show when authenticated
-CheckIn.ContentShowHide = CheckIn.ContentShowHide || {};
 (function ($, checkin) {
 
     checkin.ContentShowHide = {

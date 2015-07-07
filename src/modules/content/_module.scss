@@ -1,0 +1,9 @@
+//on initial hide content
+.content {
+  display: none;
+  //display only active class content
+  &.active {
+    display: block;
+  }
+}
+

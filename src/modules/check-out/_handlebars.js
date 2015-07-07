@@ -1,5 +1,5 @@
 "use strict";
-// find the  element, make an Ajax call, and then replace this element with handlebars generated HTML;
+// find the element checkOut-list, and then replace this element with handlebars generated HTML;
 (function ($, checkin) {
 
     checkin.CheckOutHandlebars = {
@@ -7,11 +7,10 @@
             this.checkOutEle = $(elem);
             this.setUp();
         },
-        //set Check-In click event
         setUp: function () {
             var $section = $(CheckIn.Handlebars["check-out"](CheckIn.data));
-            this.checkOutEle.html("");
-            this.checkOutEle.replaceWith($section);
+            this.checkOutEle.html("");// empty the element html so there is no dual values
+            this.checkOutEle.replaceWith($section);// replace element with handlebar generated html
         }
     };
 }(jQuery, CheckIn));

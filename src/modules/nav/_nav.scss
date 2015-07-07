@@ -1,8 +1,11 @@
+//top navbar background color
 #navbar,.navbar-header {
   background: $black;
+  //navbar anchor color
   a {
     color: $white;
     cursor: pointer;
+    //selected navbar anchor color
     &.active {
       color: $green;
     }

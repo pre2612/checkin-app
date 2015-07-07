@@ -1,9 +1,11 @@
-@import 'bootstrap';
-@import '../../bower_components/fontawesome/scss/font-awesome';
-@import 'variables';
-@import 'typo';
-@import 'button';
+@import "bootstrap";
+@import "../../bower_components/fontawesome/scss/font-awesome";
+@import "variables";
 
-@import '../modules/get-content/module';
-@import '../modules/nav/nav';
+
+@import "typo";
+@import "button";
+@import "modal";
+@import "../modules/content/module";
+@import "../modules/nav/nav";
 

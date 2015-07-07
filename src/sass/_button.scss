@@ -3,21 +3,15 @@
   background-color: $purple;
   border-color: $purple;
   min-width: 100px;
+  //change active focus hover background-color
   &:focus, &:active, &:hover {
     background-color: $purple;
     border-color: $purple;
   }
-  &.green {
-    background-color: $green;
-    border-color: $green;
-    &:focus, &:active, &:hover {
-      background-color: $green;
-      border-color: $green;
-    }
-  }
 }
-//logout btn transparent with icon font
+//make logout btn background transparent
 .logout-btn {
     background: transparent;
+    //make logout icon bigger and change color
     i.fa {font-size: 30px; color: $green;}
 }
