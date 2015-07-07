@@ -1,7 +1,7 @@
 {
-  "name": "immigration-template",
+  "name": "checkin-app",
   "version": "1.0.0",
-  "description": "Immigration template static build",
+  "description": "Chek In app static build",
   "private": true,
   "scripts": {
     "start": "node ./server/server",
@@ -56,6 +56,9 @@
   },
   "devDependencies": {
     "gulp-compile-handlebars": "^0.5.0",
-    "gulp-handlebars": "^4.0.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-wrap": "^0.11.0"
   }
 }
