@@ -1,0 +1,21 @@
+<!--Handlebar template for list of check-out devices -->
+<table class="table" id="check-out">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th class="hidden-xs hidden-sm">Device</th>
+            <th class="hidden-xs hidden-sm">Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each checkOut}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td class="hidden-xs hidden-sm">{{this.device}}</td>
+                <td class="hidden-xs hidden-sm">{{this.date}}</td>
+                <!--<td><button class="btn btn-info text-center checkout-click" id="{{@key}}">Check-Out</button></td>-->
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

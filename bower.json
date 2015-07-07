@@ -1,0 +1,17 @@
+{
+  "name": "checkin-template",
+  "version": "1.0.0",
+  "authors": [
+    "Preethy Borrawar <preethy.borrawar@gmail.com>"
+  ],
+  "description": "Immigration template",
+  "private": true,
+  "dependencies": {
+    "typeahead.js": "~0.11.1",
+    "fontawesome": "~4.3.0"
+  },
+  "devDependencies": {
+    "fontawesome": "~4.3.0",
+    "handlebars": "~3.0.0"
+  }
+}

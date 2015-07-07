@@ -1,0 +1,10 @@
+#navbar,.navbar-header {
+  background: $black;
+  a {
+    color: $white;
+    cursor: pointer;
+    &.active {
+      color: $green;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<!--Handlebar template for list of check-in devices -->
+<table class="table" id="check-in">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th class="hidden-xs hidden-sm">Device</th>
+            <th class="hidden-xs hidden-sm">Date</th>
+            <!--<th class="hidden-xs hidden-sm">CheckOut</th>-->
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each checkIn}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td class="hidden-xs hidden-sm">{{this.device}}</td>
+                <td class="hidden-xs hidden-sm">{{this.date}}</td>
+                <!--<td><button class="btn btn-info text-center checkin-click" id="{{@key}}">Check-Out</button></td>-->
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

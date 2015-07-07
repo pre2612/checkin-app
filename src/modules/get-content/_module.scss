@@ -1,0 +1,20 @@
+.modal-content {
+  background-color: $light-grey;
+
+  input {
+    width: 100%;
+  }
+}
+//on initial hide content only show tab active
+.content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+}
+
+#main-content {
+  padding-top: 30px;
+}

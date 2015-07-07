@@ -1,0 +1,36 @@
+.nav-tabs {
+  li {
+    width: 50%;
+    background: $purple;
+    border-right: 1px solid $light-purple;
+
+    a {
+      color: $white;
+      text-transform: uppercase;
+
+      &:focus, &:hover, &:active {
+        border: none;
+        background-color: transparent;
+        color: $white;
+        outline: none;
+      }
+
+    }
+    &.active {
+      border-bottom: 7px solid $green;
+      a {
+        background: transparent;
+        border: 1px solid transparent;
+        color: $white;
+
+        &:focus, &:hover, &:active {
+          border: none;
+          background-color: transparent;
+          color: $white;
+          outline: none;
+        }
+
+      }
+    }
+  }
+}

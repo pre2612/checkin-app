@@ -1,0 +1,20 @@
+<!--Handlebar template for list of devices -->
+<table class="table" id="list-device">
+    <thead>
+    <tr>
+        <th>Device</th>
+        <th class="hidden-xs hidden-sm">Email</th>
+        <th class="hidden-xs hidden-sm">Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#each devices}}
+        <tr>
+            <td class="device-name">{{this.name}}</td>
+            <td class="hidden-xs hidden-sm email"></td>
+            <td><button class="btn btn-info text-center checkout-click" id="{{@key}}">Check-Out</button></td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

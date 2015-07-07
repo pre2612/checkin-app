@@ -1,0 +1,9 @@
+{
+  "firebase": "checkin-checkout",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

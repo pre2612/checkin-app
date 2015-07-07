@@ -1,0 +1,23 @@
+//change button colors to purple
+.btn-info {
+  background-color: $purple;
+  border-color: $purple;
+  min-width: 100px;
+  &:focus, &:active, &:hover {
+    background-color: $purple;
+    border-color: $purple;
+  }
+  &.green {
+    background-color: $green;
+    border-color: $green;
+    &:focus, &:active, &:hover {
+      background-color: $green;
+      border-color: $green;
+    }
+  }
+}
+//logout btn transparent with icon font
+.logout-btn {
+    background: transparent;
+    i.fa {font-size: 30px; color: $green;}
+}
