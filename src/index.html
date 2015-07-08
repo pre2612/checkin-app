@@ -36,8 +36,8 @@
             </ul>
             <!-- Username and Sign out button -->
             <ul class="nav navbar-nav navbar-right">
-                <li><a id="username" href="#"></a> </li>
-                <li><a id="logout" href="#" class="logout-btn"><i class="fa fa-sign-out"></i></a></li>
+                <li id="username"></li>
+                <li><a id="logout" href="#" class="logout-btn">Logout</a></li>
             </ul>
         </div><!--/.nav-collapse -->
 
@@ -78,8 +78,7 @@
 </nav>
 
 <!-- Initial Login Modal for Email andd pwd -->
-<div id="loginModal" class="modal fade" role="dialog" data-backdrop="static"
-     data-keyboard="false">
+<div id="loginModal" class="modal fade" role="dialog" data-backdrop="static">
 <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -100,12 +99,10 @@
                             <label for="password">Password</label><br />
                             <input type="password" name="password" id="login-password" value="" class="text ui-widget-content ui-corner-all" />
                         </div>
+                        <button id="login" class="btn btn-info" type="submit">Login</button>
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button id="login" class="btn btn-info">Login</button>
         </div>
     </div>
 

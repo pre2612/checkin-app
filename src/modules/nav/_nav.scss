@@ -1,6 +1,7 @@
 //top navbar background color
 #navbar,.navbar-header {
   background: $black;
+  li#username {padding: 15px; color: $white;}
   //navbar anchor color
   a {
     color: $white;
