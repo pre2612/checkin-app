@@ -1,7 +1,8 @@
 "use strict";
 
 CheckIn.DeviceList = CheckIn.DeviceList || {};
-
+/*This is used to generate Device list from data and pass it to handlebar template and loop through each row in table and add respective class to buttons
+according to their status comparing with checkedOutList also on click update data and remove appropriate node from the the firebase Child , set click events for buttons*/
 CheckIn.DeviceList = function () {
     $(function () {
         var $listDevice = $("#device-list"),
