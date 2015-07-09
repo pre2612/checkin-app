@@ -46,14 +46,14 @@ CheckIn.DeviceList = function () {
 
                 };
             $updateBtnText();
-            //click evens for button to make a request for device
+            //send email to person who took device with device name
             $this.on("click", ".request-click", function () {
                 var email = $this.find(".email").text(),
                     subject = "Device Request",
                     emailBody = "Hi, I need " + $device.text() + " when you are done!";
                 window.location = "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
             });
-            //click evens for button to check in device
+            //Push the data to backend to update the devices checked-in and also remove it from checked-out
             $this.on("click", ".checkin-click", function () {
                 $email.html("");
                 $(this).text("Check-Out");
@@ -63,7 +63,7 @@ CheckIn.DeviceList = function () {
                 child.push(obj);
                 $removeNode(obj);
             });
-            //click evens for button to check out device
+            //Push the data to backend to update the devices checked-out
             $this.on("click", ".checkout-click", function () {
                 $email.html($userEmail);
                 $(this).text("Check-In");

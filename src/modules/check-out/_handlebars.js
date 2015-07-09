@@ -15,7 +15,7 @@
                 this.checkOutEle.replaceWith($section);// replace element with handlebar generated html
             } else {
                 $checkOutTbl.html("");// empty the element html so there is no dual values
-                $checkOutTbl.replaceWith($section);// replace element with handlebar generated html
+                $checkOutTbl.replaceWith($section);// find  element replace with handlebar generated html
             }
         }
     };
