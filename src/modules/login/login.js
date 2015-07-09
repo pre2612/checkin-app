@@ -21,7 +21,7 @@ CheckIn.UserEmail = CheckIn.UserEmail || {};
             event.preventDefault();
             var $email = checkin.LoginModal.getEmailVal(),
                 $pwd = checkin.LoginModal.getPwd(),
-                $formGrp = $("form").find(".form-group"),
+                $formGrp = $("form#login-form").find(".form-group"),
                 $error = $("#error"),
                 $errorLbl = $error.find("label");
             fireBase.authWithPassword({
