@@ -4,12 +4,14 @@
     checkin.LoginModal = {
         init: function (elem) {
             this.loginModal = $(elem);
+            this.form = this.loginModal.find("form");
             this.emailVal = this.loginModal.find("#login-email");
             this.pwd = this.loginModal.find("#login-password");
         },
         // Show modal
         show: function () {
-            this.loginModal.modal("show");
+            this.loginModal.modal("show"); // reset input fields everytime we show form modal
+            this.form.trigger("reset");
         },
         // Hide modal
         hide: function () {

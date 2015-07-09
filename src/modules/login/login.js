@@ -16,17 +16,27 @@ CheckIn.UserEmail = CheckIn.UserEmail || {};
             this.loginEle.on("click", checkin.Login.loginClick);
         },
         /*Login btn click takes email and pwd values from login modal and pass it on to
-        firebase authwithpwd. On login show main content and display username*/
+        firebase authwithpwd. On login show main content and display username if error show message if fields are empty or wrong username pwd*/
         loginClick: function (event) {
             event.preventDefault();
             var $email = checkin.LoginModal.getEmailVal(),
-                $pwd = checkin.LoginModal.getPwd();
-
+                $pwd = checkin.LoginModal.getPwd(),
+                $formGrp = $("form").find(".form-group"),
+                $error = $("#error"),
+                $errorLbl = $error.find("label");
             fireBase.authWithPassword({
                 email: $email,
                 password: $pwd
-            }, function (authData) {
-                if (authData) {
+            }, function (error, authData) {
+                if (error) {
+                    $formGrp.addClass("has-error");
+                    $error.show();
+                    if (($email === '') || ($pwd === '')) {
+                        $errorLbl.text("Fields cannot be empty!");
+                    } else {
+                        $errorLbl.text("Please make sure you enter right email and password!");
+                    }
+                } else {
                     checkin.Login.getUserName(authData.password.email);
                     checkin.Login.showContent();
                 }
