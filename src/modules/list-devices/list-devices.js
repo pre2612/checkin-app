@@ -19,30 +19,34 @@ CheckIn.DeviceList = function () {
                 d = new Date(),
                 //find the buttons change text and add class according to device status for logged in user give access to check out
                 $updateBtnText = function () {
-                    $.each($checkOutList, function () {
-                        if ($text === this.device) {
-                            if (this.name === $username) {
-                                $email.text(CheckIn.UserEmail);
-                                $this.find("button").text("Check-In");
-                                $this.find("button").addClass("checkin-click").removeClass("checkout-click");
-                            } else {
-                                $email.text(this.email);
-                                $this.find("button").text("Request");
-                                $this.find("button").addClass("request-click").removeClass("checkout-click");
+                    var key;
+                    for (key in $checkOutList) {
+                        if ($checkOutList.hasOwnProperty(key)) {
+                            if ($text === $checkOutList[key].device) {
+                                if ($checkOutList[key].name === $username) {
+                                    $email.text(CheckIn.UserEmail);
+                                    $this.find("button").text("Check-In");
+                                    $this.find("button").addClass("checkin-click").removeClass("checkout-click");
+                                } else {
+                                    $email.text($checkOutList[key].email);
+                                    $this.find("button").text("Request");
+                                    $this.find("button").addClass("request-click").removeClass("checkout-click");
+                                }
                             }
                         }
-                    });
+                    }
                 },
                 //remove the node from firebase on respective btn clicks
                 $removeNode = function (obj) {
-                    var arr = CheckIn.data.checkOut;
-                    $.each(arr, function (index, value) {
-                        var objName = obj.device;
-                        var name = value.device;
-                        if (name === objName) {
-                            delete arr[index];
+                    var arr = CheckIn.data.checkOut,
+                        key;
+                    for (key in arr) {
+                        if (arr.hasOwnProperty(key)) {
+                            if (arr[key].device === obj.device) {
+                                delete arr[key];
+                            }
                         }
-                    });
+                    }
                     firebaseRef.child("checkOut").set(arr);
 
                 };
