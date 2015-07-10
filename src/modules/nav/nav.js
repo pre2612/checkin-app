@@ -1,10 +1,9 @@
 "use strict";
 //On tabs click show respective content by adding and removing active class
 $(function () {
-    var $nav = $("#content-menu"),
-        $tabs = $nav.find("#tabs a"),
+    var $tabs = $("#tabs a"),
         activeClass = "active",
-        $tabsContent = $nav.find(".content");
+        $tabsContent = $("#main-content .content");
     $tabs.each(function () {
         var $tab = $(this);
         $tab.on("click", function () {

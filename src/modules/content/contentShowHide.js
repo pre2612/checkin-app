@@ -20,7 +20,7 @@
 
     // Initialize Main Content Area div with DOM element when DOM is ready
     $(function () {
-        checkin.ContentShowHide.init("#content-menu");
+        checkin.ContentShowHide.init("#wrapper");
     });
 
 }(jQuery, CheckIn));
