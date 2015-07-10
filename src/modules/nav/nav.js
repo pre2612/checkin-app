@@ -2,7 +2,7 @@
 //On tabs click show respective content by adding and removing active class
 $(function () {
     var $nav = $("#content-menu"),
-        $tabs = $nav.find("a"),
+        $tabs = $nav.find("#tabs a"),
         activeClass = "active",
         $tabsContent = $nav.find(".content");
     $tabs.each(function () {
