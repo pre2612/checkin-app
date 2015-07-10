@@ -17,6 +17,11 @@
                 <td class="hidden-xs hidden-sm">{{this.date}}</td>
                 <!--<td><button class="btn btn-info text-center checkin-click" id="{{@key}}">Check-Out</button></td>-->
             </tr>
+        <!--when there is no content display message that devices are not checked in-->
+        {{else}}
+            <tr>
+                <td>None of the devices are checked In!</td>
+            </tr>
         {{/each}}
     </tbody>
 </table>
