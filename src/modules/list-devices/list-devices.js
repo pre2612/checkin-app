@@ -70,10 +70,6 @@ CheckIn.DeviceList = function () {
             });
             //Push the data to backend to update the devices checked-out
             $this.on("click", ".checkout-click", function () {
-                console.log(CheckIn.UserEmail);
-                console.log(CheckIn.UserName);
-                console.log($email.length);
-                $email.text($userEmail);
                 $(this).text("Check-In");
                 $(this).addClass("checkin-click").removeClass("checkout-click");
                 var obj = {name: $username, date: d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear(), device: $text, email: $userEmail},
